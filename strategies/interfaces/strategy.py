@@ -23,3 +23,10 @@ class Strategy(ABC):
 		Update the strategy's parameters.
 		"""
 		pass
+
+	@abstractmethod
+	def reset(self):
+		"""
+		Reset the strategy's parameters.
+		"""
+		pass
