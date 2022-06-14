@@ -11,7 +11,14 @@ class Agent(ABC):
 		self.config = config
 	
 	@abstractmethod
-	def act(self, observation: np.ndarray):
+	def get_action(self, observation: np.ndarray):
+		"""
+		Abstract method for agents to implement.
+		"""
+		pass
+
+	@abstractmethod
+	def update(self, observation: np.ndarray, action: int, reward: float, next_observation: np.ndarray, done: bool):
 		"""
 		Abstract method for agents to implement.
 		"""
